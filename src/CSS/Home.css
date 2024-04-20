@@ -1,0 +1,513 @@
+
+
+
+/* ###################################### styling showcase are ( IMG wala )  ##########################  */
+
+.showcase-area {
+    height: 50vh;
+    background: linear-gradient(
+        rgba(240, 240, 240, 0),
+        rgba(255, 255, 255, 0.336)
+      ),
+      url(../IMG/header-image2.jpg);
+  
+    /* new thing to learn */
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .showcase-area .middle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+  
+    /* need to learn  */
+  
+    /* border: 4px solid aqua; */
+    height: 100%;
+    justify-content: center;
+  }
+  
+  .showcase-area h1 {
+    font-size: 2.3rem;
+    text-transform: capitalize;
+    letter-spacing: 0.05rem;
+  }
+  
+  .showcase-area p {
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+    letter-spacing: 0.05rem;
+  }
+  
+  .showcase-area .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: #99d3f9;
+    padding: 0.4em 1.7em;
+    margin-top: 0.4em;
+    border-radius: 10rem;
+    letter-spacing: 0.01rem;
+  }
+  
+  .showcase-area .btn:hover {
+    background-color: #99d2f9b3;
+    cursor: pointer;
+  }
+  
+  .showcase-area .btn:visited,
+  .showcase-area .btn:link {
+    color: black;
+    cursor: pointer;
+  }
+  
+  /* ###################################### styling about-us ( IMG ke niche wala )  ##########################  */
+  
+  .about-us {
+    height: 50vh;
+    /* padding: 50px 0px; */
+  
+    /* do not provide the height here it is the main resone for the confustion  */
+  
+    background: #f5f5f7;
+  }
+  
+  .about-us .about-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  
+  .about-us .about-text {
+    /* border: 3px solid black; */
+    flex-shrink: 2;
+    flex-basis: 300px;
+    margin: auto;
+  
+    /* text-box flex item wo kam size le raha tha issliye text-box or img-box width equal nhi le rahe the that we have apply "felx-grow"  */
+  
+    flex-grow: 4;
+  }
+  
+  /* learn about more and more  */
+  
+  .about-us .about-img {
+    /* border: 3px solid black; */
+    flex-grow: 1;
+    flex-shrink: 2;
+    flex-basis: 300px;
+  }
+  
+  .about-us img {
+    /* border: 3px solid lawngreen; */
+    object-fit: cover;
+    object-position: center;
+    
+  
+    /* learn about more and more  */
+  
+    display: block;
+    height: 350px;
+    max-width: 100%;
+  }
+  
+  .about-us h2 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+  }
+  
+  .about-us p.small {
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .about-us p {
+    font-size: 1.3rem;
+    color: #555;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  /* appling animation for about-us section */
+  
+  .about-us .about-text {
+    /* border: 2px solid black; */
+    position: relative;
+    animation-name: about-text-animation;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes about-text-animation {
+    0% {
+      left: -110%;
+    }
+  
+    100% {
+      left: 0%;
+    }
+  }
+  
+  .about-us .about-img {
+    /* border: 2px solid black; */
+    position: relative;
+    animation-name: about-img-animation;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes about-img-animation {
+    0% {
+      left: +110%;
+    }
+  
+    100% {
+      left: 0%;
+    }
+  }
+  
+  /* ###################################### styling All semster   ##########################  */
+  
+  /* .types-of-food{
+      /* border: 4px solid blue; 
+  } */
+  
+  .types-of-food .tittle {
+    /* border: 2px solid black; */
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 3.5rem;
+    color: #555;
+  }
+  
+  .types-of-food .type-food-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: 2px solid black; */
+  }
+  
+  .type-food-wrapper .box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .type-food-wrapper .box {
+    /* border: 2px solid black; */
+    flex-basis: 351px; /* desktop 300px */
+    flex-shrink: 2;
+    position: relative;
+    box-shadow: 0px 1px 15px 0px;
+    margin-bottom: 10rem;
+    border-radius: 10px;
+  }
+  
+  /* --------------------------- */
+  /* animation for All semseter /*/
+  /* --------------------------- */
+  
+  .type-food-wrapper .box h3 {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+  
+  .type-food-wrapper .box a {
+    position: relative;
+    top: 35%;
+    left: 0%;
+    /* transform: translate(-50%,-50%); */
+  }
+  
+  .type-food-wrapper .middle {
+    /* border: 4px solid blue; */
+    border-radius: 8px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.744);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  
+    position: absolute;
+    top: 40%;
+    left: 0%;
+  
+    opacity: 0;
+    z-index: 10;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .type-food-wrapper .middle:hover {
+    top: 0%;
+    opacity: 1;
+  }
+  
+  .type-food-wrapper .btn {
+    display: inline-block;
+    font-size: 1.03rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5em 1.2em;
+    border-radius: 100px;
+    background-color: #5dade2;
+    color: white;
+  }
+  
+  .type-food-wrapper .btn:hover {
+    background-color: #039affdb;
+  }
+  
+  
+  /* ###################################### styling contact form  ##########################  */
+  
+  .contact {
+    /* border: 3px solid black; */
+    background: rgb(226, 226, 226);
+  }
+  
+  .contact-form-container {
+    /* border: 3px solid black; */
+    display: flex;
+    padding: 5rem 8rem;
+  }
+  
+  .form-img {
+    /* border: 3px solid black; */
+    width: 50%;
+    flex: 1 1 350px;
+  }
+  
+  .form-container {
+    /* border: 3px solid black; */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #fff;
+    width: 50%;
+    height: 382px;
+    padding: 0rem 2rem;
+    margin: auto;
+  }
+  
+  .contact-form-container .form-img img {
+    display: block;
+    width: 100%;
+    height: 382px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .form-container input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0rem;
+    margin-bottom: 1rem;
+    outline: none;
+    color: #444;
+    box-shadow: none;
+    font-weight: 500;
+  }
+  
+  .form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0rem;
+    margin-bottom: 1rem;
+    outline: none;
+    color: #444;
+    box-shadow: none;
+    font-weight: 400;
+    resize: none;
+  }
+  
+  .form-container h2 {
+    padding-top: 0.5em;
+    font-size: 2rem;
+  }
+  
+  .form-container .btn {
+    background-color: #5dade2;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    padding: 0.5em 0.7em;
+    margin: 0.3em 0em;
+    border-radius: 100px;
+    color: white;
+  }
+  
+  .form-container .btn:hover {
+    background: #288dd0d5;
+  }
+  
+  /* ###################################### styling footer section  ##########################  */
+  
+  .footer {
+    background: #555;
+    height: auto;
+  }
+  
+  .footer-text {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 1rem;
+  }
+  
+  
+  .footer-text a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+
+  .footer-text i{
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 0.8rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+/* ########################################################## @media queris ######################################################################### */
+
+
+/* Lachoo back IMG section  */
+
+@media (max-width: 600px) {
+  .showcase-area {
+    height: 50vh;
+  }
+
+  .showcase-area h1 {
+    font-size: 1.8rem;
+  }
+
+  .showcase-area p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .showcase-area .btn {
+    font-size: 1.1rem;
+  }
+}
+
+/* about-us section */
+
+@media (max-width: 600px) {
+  .about-us {
+    padding-top: 3rem;
+    background: #efeeef;
+  }
+
+  .about-us img {
+    object-fit: cover;
+    object-position: center;
+    width: auto;
+    height: auto;
+  }
+
+  .about-us h2 {
+    font-size: 2rem;
+  }
+
+  .about-us p.small {
+    font-size: 1.2rem;
+  }
+
+  .about-us p {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* contact form */
+
+@media (max-width: 600px) {
+  .contact-form-container {
+    flex-wrap: wrap;
+    padding: 4rem 0rem;
+  }
+
+  .form-img {
+    margin-bottom: 1em;
+  }
+
+  .form-container {
+    width: 100%;
+    height: auto;
+    padding: 0rem 1rem;
+    border-radius: 8px;
+  }
+
+  .contact-form-container .form-img img {
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .form-container textarea {
+    height: 68px;
+  }
+
+  .form-container .btn {
+    font-size: 1.5rem;
+    padding: 0.5em 0.7em;
+    margin: 1em 0em;
+  }
+}
+
+/* footer */
+
+@media (max-width: 600px) {
+  .footer-text {
+    font-size: 1.5rem;
+  }
+  
+  
+  .footer-text a{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+
+  .footer-text i{
+    font-size: 1.5rem;
+  }
+}
+
+

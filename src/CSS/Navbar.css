@@ -1,0 +1,345 @@
+
+/* ###################################### styling the nav-bar ##########################  */
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    height: 55px;
+  
+    /* new thing to learn about */
+  
+    background: #fff;
+    box-shadow: 0px -2px 17px 0px;
+    opacity: 0.85;
+  }
+  
+  .navbar-container {
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    /* copy the same propertry form nav-bar it remvoe the wried color changeing while hoever */
+  
+    color: #000;
+    background: #fff;
+    opacity: 0.85;
+  }
+  
+  .navbar-container input[type="checkbox"],
+  .navbar-container .humburger-lines {
+    display: none;
+  }
+  
+  .navbar-container .logo {
+    order: 1;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .navbar-container .logo img{
+    margin-top: 0.8rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navbar-container .logo:hover {
+    transform: scale(1.05);
+    color: #5dade2;
+  }
+  
+  .navbar-container .menu-list {
+    order: 2;
+    display: flex;
+  }
+  
+  .navbar-container .menu-list li {
+    list-style-type: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  
+    transition: all 400ms ease-in-out;
+  }
+  
+  .navbar-container .menu-list li:hover {
+    transform: scale(1.05);
+  }
+  
+  .navbar-container .menu-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 2em;
+  
+    transition: all 300ms ease-in-out;
+  }
+  
+  .navbar-container .menu-list li a:hover {
+    color: #5dade2;
+    transform: scale(1.05);
+  }
+  
+  /* For drop down list */
+  
+  ul li ul.dropdown li{
+    display: block;
+  }
+  
+  ul li ul.dropdown{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  
+  .dropdown li{
+    background-color: white;
+    height: 4rem;
+    margin-left: 1.3rem;
+  }
+  
+  .dropdown .first{
+    margin-top: 1.3rem;
+  }
+  
+  ul li:hover ul.dropdown{
+    display: block;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+  
+
+
+/* ########################################################## @media queris######################################################################### */
+
+/* --------------------------- */
+/* @meadia query's for tablets */
+/* --------------------------- */
+
+@media (max-width: 768px) {
+  /* modifing nav-bar */
+  /* ---------------- */
+
+  .navbar {
+    /* border: 2px solid black; */
+    opacity: 0.95;
+    position: fixed;
+    height: 45px;
+  }
+
+  .navbar-container {
+    position: relative;
+    /* border: 2px solid black; */
+    display: block;
+    opacity: 1;
+    height: 45px;
+  }
+
+  .navbar-container .logo img{
+    margin-top: 0rem;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+  }
+  
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .humburger-lines {
+    display: block;
+  }
+
+  /* modifing menu-list */
+  /* ------------------ */
+
+  .navbar-container .menu-list {
+    display: inline-block;
+    /* border: 2px solid black; */
+    padding-top: 6rem;
+    padding-left: 0.3rem;
+    width: 19rem;
+    height: 100vh;
+    opacity: 1;
+    background: #fff;
+    box-shadow: 0px 1px 15px 0px;
+
+    position: absolute;
+    left: -3.75rem;
+
+    transform: translatex(-110%);
+
+    transition: all 300ms ease-in-out;
+  }
+
+  /* main-login */
+  /* ---------- */
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-list {
+    opacity: 1;
+    transform: translatex(0%);
+  }
+
+  .navbar-container .menu-list li {
+    display: block;
+    margin-bottom: 2rem;
+
+    transition: all 300ms ease-in-out;
+  }
+
+  .navbar-container .menu-list li:hover {
+    transform: scaleZ(1.2);
+    background-color: #fff;
+  }
+
+  .navbar-container .menu-list li a {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .navbar-container .menu-list li a:hover {
+    color: black;
+  }
+
+  /* logo */
+  /* ---- */
+
+  .navbar-container .logo {
+    /* border: 2px solid black; */
+    display: inline-block;
+    position: absolute;
+    left: 92.5%;
+    margin-top: 0.2em;
+  }
+
+  /* checkbox */
+  /* -------- */
+
+  .navbar-container input[type="checkbox"] {
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 7px;
+    z-index: 10;
+    opacity: 0;
+  }
+
+  /* humburger lines */
+  /* --------------- */
+
+  .navbar-container .humburger-lines {
+    width: 34px;
+    height: 32px;
+    position: absolute;
+    top: 7px;
+    left: 2.8px;
+    z-index: 9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .humburger-lines .line {
+    width: 100%;
+    height: 4px;
+    background: black;
+
+    transition: all 300ms ease-in-out;
+  }
+
+  /* animation for humburger lines */
+  /* ----------------------------- */
+
+  .humburger-lines .line1 {
+    transform-origin: top left;
+  }
+
+  .humburger-lines .line3 {
+    transform-origin: bottom left;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .humburger-lines .line1 {
+    transform: rotate(41.5deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .humburger-lines .line2 {
+    display: none;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .humburger-lines .line3 {
+    transform: rotate(-44deg);
+    position: relative;
+    top: -4px;
+  }
+}
+
+/* -------------------------------- */
+/* @meadia query's for smart-phones */
+/* -------------------------------- */
+
+/* humburger menu  */
+
+@media (max-width: 600px) {
+  /* modifing nav-bar */
+  /* ---------------- */
+
+  .navbar {
+    height: 6rem;
+  }
+
+  .navbar-container {
+    height: 6rem;
+  }
+
+  /* modifing menu-list */
+  /* ------------------ */
+
+  .navbar-container .menu-list {
+    width: 20rem;
+    left: -2.2rem;
+  }
+
+  .navbar-container .menu-list li a {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+  }
+
+  .navbar-container .logo {
+    font-size: 2.2rem;
+    margin-top: 0.60em;
+    transform: translatex(-20%);
+  }
+
+  /* checkbox */
+  /* -------- */
+
+  .navbar-container input[type="checkbox"] {
+    width: 32px;
+    height: 25px;
+    position: absolute;
+    top: 18px;
+    z-index: 10;
+    opacity: 0;
+  }
+
+  /* humburger lines */
+  /* --------------- */
+
+  .navbar-container .humburger-lines {
+    width: 32px;
+    height: 25px;
+    top: 18px;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .humburger-lines .line1 {
+    transform: rotate(40deg);
+    position: relative;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .humburger-lines .line3 {
+    transform: rotate(-40deg);
+    position: relative;
+    top: -2px;
+  }
+}

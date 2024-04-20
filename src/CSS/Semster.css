@@ -1,0 +1,53 @@
+/* SEMSTER PAGE DESIGN */
+
+.heading {
+  font-size: 4rem;
+  font-weight: 400;
+  padding-top: 6.2rem;
+}
+
+.comman {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  padding: 0.7rem 0.8rem;
+  font-size: 2rem;
+}
+
+.comman:hover {
+  width: auto;
+  background-color: #5dade2;
+  transition: all 600ms ease-in-out;
+  cursor: pointer;
+}
+
+.comman:hover:after {
+  content: "Click to open";
+  font-size: 1.2rem;
+  transition: all 700ms ease-in-out;
+  margin-left: 3rem;
+}
+
+/* ########################################################## @media queris ######################################################################### */
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 3.5rem;
+    font-weight: 400;
+    padding-top: 8rem;
+  }
+
+  .comman {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .comman:hover:after {
+    content: "Click to open";
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  
+}
